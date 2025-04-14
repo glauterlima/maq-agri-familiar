@@ -1,0 +1,46 @@
+{% extends 'maqdesenvolvimento/base.html' %}
+{% load static %}
+{% block content %}
+    
+           
+                <section class="galeria">
+                    
+                    <div class="cards">
+                        <h2 class="cards__titulo">Navegue pela galeria</h2>
+                        <ul class="cards__lista">
+                            {% if cards %}
+                            {% for maquina in cards %}
+                                <li class="card">
+                                    <a href="{% url 'imagem' maquina.id %}">
+                                    {% if maquina.foto == "" or maquina.foto == null %}                                        
+                                        <img class="card__imagem" src="{% static '/assets/imagens/galeria/not_found.png'%}" alt="foto">
+                                    {% else %}
+                                        <img class="card__imagem" src="{{ maquina.foto.url }}" alt="foto">
+                                    {% endif %}
+                                    </a>
+                                    </a>
+                                    <span class="card__tag">Trator</span>
+                                    <div class="card__info">
+                                        <p class="card__titulo">{{ maquina.nome }}</p>
+                                        <div class="card__texto">
+                                            <p class="card__descricao">{{ maquina.descricao }}</p>
+                                            <span>
+                                                <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li> 
+                            {% endfor %}
+                            {% else %}
+                            <div>
+                                <p class="imagem__texto">Máquinas e/ou implementos não encontrados!</p>
+                            </div>
+                            {% endif %}                              
+                        </ul>
+                    </div>
+                    
+                </section>
+            </main>
+    </div>
+   
+{% endblock %}
