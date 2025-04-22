@@ -19,9 +19,12 @@
                                     {% endif %}
                                     </a>
                                     </a>
-                                    <span class="card__tag">Trator</span>
+                                    <span class="card__tag">{{ maquina.operacao_agricola }}</span>
                                     <div class="card__info">
-                                        <p class="card__titulo">{{ maquina.nome }}</p>
+                                        <p class="card__titulo">{{ maquina.tipo }}</p>
+                                        <a href="{{ maquina.link_pagina }}" target="_blank">
+                                            <p class="card__titulo">Empresa {{ maquina.empresa }}</p>
+                                        </a>
                                         <div class="card__texto">
                                             <p class="card__descricao">{{ maquina.descricao }}</p>
                                             <span>
