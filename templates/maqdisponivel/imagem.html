@@ -12,8 +12,16 @@
                         <div class="imagem__info">
                             <div class="imagem__texto">
                                 <p class="imagem__titulo">{{ maquina.nome }}</p>
-                                <p class="imagem__descricao">{{ maquina.categoria }}</p>
-                                <p class="imagem__texto">{{ maquina.descricao }}</p>
+                                <a href="{{ maquina.link_pagina }}" target="_blank">
+                                    <p class="card__titulo">Empresa {{ maquina.empresa }}</p>
+                                </a>
+                                <p class="card__titulo">Categoria<p class="imagem__texto">{{ maquina.categoria }}</p></p></br>
+                                <p class="card__titulo">Operação Agrícola<p class="imagem__texto">{{ maquina.operacao_agricola }}</p></p></br>
+                                <p class="card__titulo">Tipo<p class="imagem__texto">{{ maquina.tipo }}</p></p></br>
+                                <p class="card__titulo">Cadeia Produtiva<p class="imagem__texto">{{ maquina.cadeia_produtiva }}</p></p></br>
+                                <p class="card__titulo">Código Finame<p class="imagem__texto">{{ maquina.codigo_finame }}</p></p></br>
+                                <p class="card__titulo">Potência<p class="imagem__texto">{{ maquina.hp }} HP</p></p></br>
+                                <p class="card__titulo">Descrição<p class="imagem__descricao">{{ maquina.descricao }}</p></p>
                             </div>
                         </div>
                     </div>

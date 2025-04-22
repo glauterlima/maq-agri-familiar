@@ -250,7 +250,7 @@ table {
 }
 
 .imagem__descricao {
-    font-size: 0.7rem;
+    font-size: 1rem;
     color: #041833;
 }
 
@@ -281,7 +281,8 @@ table {
 }
 
 .menu-lateral__navegacao img {
-    margin-right: 1.5rem;
+    margin-right: 0.5rem;
+    margin-left: 2.5rem;
 }
 
 .pagina-inicial {
