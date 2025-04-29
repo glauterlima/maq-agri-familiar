@@ -417,3 +417,9 @@ table {
     --bs-alert-bg: #cfe2ff;
     --bs-alert-border-color: #b6d4fe;
 }
+
+.alert-danger {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+}
