@@ -2,8 +2,10 @@ from django.shortcuts import render, get_object_or_404
 from maqdisponivel.models import Maquina
 
 
-def index(request):    
-    maquinas = Maquina.objects.order_by("data_registro").filter(publicada=True)    
+def index(request):  
+    maquinas = Maquina.objects.all().filter(publicada=True)   
+    #maquinas = Maquina.objects.all().filter(publicada=True)
+    #maquinas = Maquina.objects.order_by("-data_registro").filter(publicada=True)    
     return render(request, 'maqdisponivel/index.html', {"cards": maquinas})
 
 def imagem(request, maquina_id):
@@ -11,7 +13,7 @@ def imagem(request, maquina_id):
     return render(request, 'maqdisponivel/imagem.html', {"maquina": maquina})
 
 def buscar(request):
-    maquinas = Maquina.objects.order_by("data_registro").filter(publicada=True)  
+    maquinas = Maquina.objects.all().filter(publicada=True) 
     
     if "buscar" in request.GET:
         nome_a_buscar = request.GET['buscar']

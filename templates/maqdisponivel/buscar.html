@@ -12,8 +12,9 @@
                             {% for maquina in cards %}
                                 <li class="card">
                                     <a href="{% url 'imagem' maquina.id %}">
-                                    {% if maquina.foto == "" or maquina.foto == null %}                                        
-                                        <img class="card__imagem" src="{% static '/assets/imagens/galeria/not_found.png'%}" alt="foto">
+                                        {% if maquina.foto == "" or maquina.foto == null %}                                        
+                                        <img class="card__imagem" src="{% static '/assets/imagens/galeria/0'%}{{maquina.codigo_finame}}.jpg" alt="foto">    
+                                        <!--<img class="card__imagem" src="{% static '/assets/imagens/galeria/not_found.png'%}" alt="foto">-->
                                     {% else %}
                                         <img class="card__imagem" src="{{ maquina.foto.url }}" alt="foto">
                                     {% endif %}

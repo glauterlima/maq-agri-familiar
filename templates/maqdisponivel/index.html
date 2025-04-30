@@ -11,19 +11,20 @@
                             {% if cards %}
                             {% for maquina in cards %}
                                 <li class="card">
-                                    <a href="{% url 'imagem' maquina.id %}">
+                                    <a href="{% url 'imagem' maquina.id %}">                                        
                                     {% if maquina.foto == "" or maquina.foto == null %}                                        
-                                        <img class="card__imagem" src="{% static '/assets/imagens/galeria/not_found.png'%}" alt="foto">
+                                        <img class="card__imagem" src="{% static '/assets/imagens/galeria/0'%}{{maquina.codigo_finame}}.jpg" alt="foto">    
+                                        <!--<img class="card__imagem" src="{% static '/assets/imagens/galeria/not_found.png'%}" alt="foto">-->
                                     {% else %}
                                         <img class="card__imagem" src="{{ maquina.foto.url }}" alt="foto">
                                     {% endif %}
                                     </a>
                                     </a>
-                                    <span class="card__tag">{{ maquina.operacao_agricola }}</span>
+                                    <span class="card__tag">{{ maquina.natureza }}</span>
                                     <div class="card__info">
-                                        <p class="card__titulo">{{ maquina.tipo }}</p>
+                                        <p class="card__titulo">{{ maquina.nome }}</p>
                                         <a href="{{ maquina.link_pagina }}" target="_blank">
-                                            <p class="card__titulo">Empresa {{ maquina.empresa }}</p>
+                                            <p class="card__titulo">{{ maquina.nome_fabricante }}</p>
                                         </a>
                                         <div class="card__texto">
                                             <p class="card__descricao">{{ maquina.descricao }}</p>

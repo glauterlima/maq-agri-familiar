@@ -5,7 +5,8 @@
                 <section class="imagem">
                     <div class="imagem__conteudo">
                         {% if maquina.foto == "" or maquina.foto == null %}  
-                            <img class="imagem__imagem" src="{% static '/assets/imagens/galeria/not_found.png'%}">
+                            <!--<img class="imagem__imagem" src="{% static '/assets/imagens/galeria/not_found.png'%}">-->
+                            <img class="card__imagem" src="{% static '/assets/imagens/galeria/0'%}{{maquina.codigo_finame}}.jpg" alt="foto"> 
                         {% else %}
                             <img class="card__imagem" src="{{ maquina.foto.url }}" alt="foto">
                         {% endif %}
