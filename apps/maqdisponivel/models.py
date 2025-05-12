@@ -26,9 +26,15 @@ class Maquina(models.Model):
         ("PLANTIO", "Plantio" ),
         ("PREPARO DE SOLO", "Preparo de Solo" ),
         ("COLHEITA", "Colheita" ),
-        ("PLANTIO", "Plantio" ),
         ("PÓS-COLHEITA", "Pós-Colheita" ),
        
+    ]
+    
+    OPCOES_NATUREZA = [
+        ("TRATORES", "Tratores" ),
+        ("PULVERIZADOR_AGRICOLA", "Pulverizador Agrícola" ),
+        ("MÁQUINAS E APARELHOS PARA PREPARAÇÃO, TRABALHO DO SOLO OU CULTURA", "Máquinas e aparelhos para preparação, trabalho do solo ou cultura" ),
+          
     ]
     
     codigo_finame = models.CharField(max_length=100, null=True, blank=True, default='') 
@@ -40,7 +46,7 @@ class Maquina(models.Model):
     nome_fabricante = models.CharField(max_length=100, null=True, blank=True)
     ncm = models.CharField(max_length=50, null=True, blank=True)
     ncm_descricao = models.TextField(null=True, blank=True)
-    natureza = models.TextField(null=True, blank=True)
+    natureza = models.TextField(null=True, choices=OPCOES_NATUREZA, blank=True)
     link_pagina = models.CharField(max_length=100, null=True, blank=True)
     tema = models.CharField(null=True, max_length=100, choices=OPCOES_TEMA, default='')
     cultura = models.TextField(null=True, blank=True)

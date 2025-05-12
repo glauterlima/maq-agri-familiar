@@ -2,7 +2,30 @@
 {% load static %}
 {% block content %}
     
-            
+                <section class="tags">
+                    <p class="tags__titulo">Busque por etapa produtiva:</p>
+                    <select id="link">
+                        <option value="" selected>Escolha o tipo</option>
+                        <option value="{% url 'filtro_natureza' 'TRATORES' %}">Tratores</option>
+                        <option value="{% url 'filtro_natureza' 'PULVERIZADOR_AGRICOLA' %}">Pulverizadores Agrícolas</option>
+                    </select>                   
+                
+                    
+                    <ul class="tags__lista">
+                        <li class="tags__tag"><a href="{% url 'filtro_etapa' 'PLANTIO' %}" class="btn" style="color: #C9C9C9;">Plantio</a></li>
+                        <li class="tags__tag"><a href="{% url 'filtro_etapa' 'PREPARO DE SOLO' %}" class="btn" style="color: #C9C9C9;">Preparo de solo</a></li>
+                        <li class="tags__tag"><a href="{% url 'filtro_etapa' 'COLHEITA' %}" class="btn" style="color: #C9C9C9;">Colheita</a></li>
+                        <li class="tags__tag"><a href="{% url 'filtro_etapa' 'PÓS-COLHEITA' %}" class="btn" style="color: #C9C9C9;">Pós-colheita</a></li>
+                    </ul>
+                </section>
+                <section class="tags">
+                    <p class="tags__titulo">Busque por categoria:</p>
+                    <ul class="tags__lista">
+                        <li class="tags__tag"><a href="{% url 'filtro_natureza' 'TRATORES' %}" class="btn" style="color: #C9C9C9;">Tratores</a></li>
+                        <li class="tags__tag"><a href="{% url 'filtro_natureza' 'PULVERIZADOR_AGRICOLA' %}" class="btn" style="color: #C9C9C9;">Pulverizador Agrícola</a></li>
+                        <li class="tags__tag"><a href="{% url 'filtro_natureza' 'MÁQUINAS E APARELHOS PARA PREPARAÇÃO, TRABALHO DO SOLO OU CULTURA' %}" class="btn" style="color: #C9C9C9;">Máquinas e aparelhos para preparação, trabalho do solo ou cultura</a></li>
+                    </ul>
+                </section>
                 <section class="galeria">
                     
                     <div class="cards">
@@ -20,12 +43,10 @@
                                     {% endif %}
                                     </a>
                                     </a>
-                                    <span class="card__tag">{{ maquina.natureza }}</span>
+                                    <!--<span class="card__tag">{{ maquina.natureza }}</span>-->
                                     <div class="card__info">
                                         <p class="card__titulo">{{ maquina.nome }}</p>
-                                        <a href="{{ maquina.link_pagina }}" target="_blank">
-                                            <p class="card__titulo">{{ maquina.nome_fabricante }}</p>
-                                        </a>
+                                        
                                         <div class="card__texto">
                                             <p class="card__descricao">{{ maquina.descricao }}</p>
                                             <span>

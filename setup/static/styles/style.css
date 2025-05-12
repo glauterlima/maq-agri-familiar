@@ -192,8 +192,8 @@ table {
 
 .card__descricao {
     font-size: 0.6em;
-    margin-top: 0.8em;
-    color: #041833;
+    margin-top: 0.8em;   
+   
 }
 
 .galeria {
@@ -384,7 +384,7 @@ table {
     margin-right: 1.5rem;
     border-radius: 8px;
     padding: .8rem .5rem;
-    width: 100px;
+    width: 300px;
     text-align: center;
     border: 2px solid transparent;
 }
@@ -541,3 +541,4 @@ table {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
 }
+
