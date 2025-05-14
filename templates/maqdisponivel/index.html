@@ -34,10 +34,10 @@
                                         <p class="card__titulo">{{ maquina.nome }}</p>
                                         
                                         <div class="card__texto">
-                                            <p class="card__descricao">{{ maquina.descricao }}</p>
-                                            <span>
+                                            <a href="{% url 'imagem' maquina.id %}" class="classe1"><p class="card__descricao">{{ maquina.descricao }}</p></a>
+                                            <!--<span>
                                                 <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
-                                            </span>
+                                            </span>-->
                                         </div>
                                     </div>
                                 </li> 

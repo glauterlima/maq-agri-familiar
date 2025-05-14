@@ -50,6 +50,22 @@ q:before, q:after {
     content: '';
     content: none;
 }
+
+a.classe1:link, a.classe1:visited {
+	text-decoration: none;
+	}
+a.classe1:hover {
+	text-decoration: none;
+	color: #01060c;    
+}
+a.classe1:active {
+	text-decoration: none;  
+	}
+
+a.classe1 {
+	color: #041833;  
+	}
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -183,16 +199,25 @@ table {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    color: #041833;
+    color: #041833;     
 }
 
 .card__texto img {
     cursor: pointer;
+    
 }
 
 .card__descricao {
-    font-size: 0.6em;
-    margin-top: 0.8em;   
+    font-size: 0.8em;
+    margin-top: 0.8em;
+    max-width: 50ch;     
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;      
    
 }
 

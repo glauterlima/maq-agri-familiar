@@ -184,16 +184,18 @@ table {
     justify-content: space-between;
     flex-wrap: wrap;
     color: #041833;
+    
 }
 
 .card__texto img {
-    cursor: pointer;
+    cursor: pointer;   
 }
 
 .card__descricao {
     font-size: 0.6em;
     margin-top: 0.8em;
     color: #041833;
+    
 }
 
 .galeria {
