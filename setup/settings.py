@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'apps.lacunatecnologica.apps.LacunatecnologicaConfig',
     'apps.maqdisponivel.apps.MaqdisponivelConfig',
     'apps.usuarios.apps.UsuariosConfig',
+    'apps.fornecedores.apps.FornecedoresConfig',
     
     #'storages',
 ]

@@ -9,6 +9,7 @@ urlpatterns = [
     path('', include('apps.maqdesenvolvimento.urls') ),
     path('', include('apps.lacunatecnologica.urls') ),
     path('', include('apps.usuarios.urls')),
+    path('', include('apps.fornecedores.urls')),
 ] 
 
 if settings.DEBUG:
