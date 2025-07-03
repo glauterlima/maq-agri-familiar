@@ -1,7 +1,7 @@
 {% load static %}
 <div class="pagina-inicial">
     <header class="cabecalho">
-        <img src="{% static '/assets/logo/EMBRAPA.png' %}" alt="Logo da Embrapa" />
+        <a href="{% url 'index' %}"><img src="{% static '/assets/logo/mecaniza.png' %}" alt="Mecaniza" /></a>
         {% include 'partials/_alertas.html' %}
         <div class="cabecalho__busca">
             <div class="busca__fundo">
@@ -17,8 +17,8 @@
     <main class="principal">
         <section class="menu-lateral">
             <nav class="menu-lateral__navegacao">
-                <a href="{% url 'index' %}"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Máquinas e implementos agrícolas</a>
-                <!--<a href="{% url 'emdesenvolvimento' %}"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}"> Projetos em desenvolvimento</a>
+                <!--<a href="{% url 'index' %}"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Máquinas e implementos agrícolas</a>
+                <a href="{% url 'emdesenvolvimento' %}"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}"> Projetos em desenvolvimento</a>
                 <a href="{% url 'login' %}"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}"> Login</a>
                 <a href="{% url 'cadastro' %}"><img src="{% static '/assets/ícones/1x/Novas - inativo.png' %}"> Cadastro</a>
                 <a href="{% url 'logout' %}"><img src="{% static '/assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Logout</a>-->
