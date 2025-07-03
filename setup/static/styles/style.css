@@ -95,8 +95,16 @@ table {
 .cabecalho {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 1.5rem 0 4rem 0;
+}
+
+.cabecalho__imagem {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0 8rem 0;
 }
 
 .cabecalho__busca {
@@ -107,7 +115,8 @@ table {
     height: auto;
     justify-content: space-between;
     padding: 2px;
-    width: auto; 
+    width: auto;
+     
 }
 
 .busca__fundo {
