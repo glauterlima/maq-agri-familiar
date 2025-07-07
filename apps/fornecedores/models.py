@@ -32,7 +32,7 @@ class Fornecedor(models.Model):
         ("TO", "TO" ),
     ]   
  
-    cnpj = models.CharField(max_length=15, null=False, blank=False, unique=True) 
+    cnpj = models.CharField(max_length=30, null=False, blank=False, unique=True) 
     nome = models.CharField(max_length=100, null=False, blank=False) 
     foto = models.ImageField(upload_to="fotos/%Y/%m/%d/", blank=True)    
     logradouro = models.CharField(max_length=100, null=False, blank=False, default='') 
