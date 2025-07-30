@@ -46,6 +46,7 @@ class Maquina(models.Model):
     ]
     
     OPCOES_FREQUENCIA_USO = [
+        ("DESCONHECIDO", "Desconhecido" ),
         ("ESPORÁDICA", "Esporádica" ),
         ("DIÁRIA", "Diária" ),
         ("SEMANAL", "Semanal" ),
